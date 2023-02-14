@@ -1,0 +1,38 @@
+@import "../../style/variables.scss";
+
+.homeContainer {
+    display: grid;
+    grid-template-columns: [start] 1.7rem [center-start] 90vw [center-end] 1.7rem [end];
+    grid-template-rows: [start-header] 7rem [start-hero] 37rem [start-options] 26rem [start-signin] 28rem [start-fab] 12rem [start-footer] 17rem [end-footer];
+}
+.homeheader {
+    grid-column: center-start / center-end;
+    grid-row: start-header / start-hero;
+    position: fixed;
+    
+}
+.homehero {
+    grid-column: start / end;
+    grid-row: start-hero / start-options;
+    margin-right: 3rem;
+    &__content {
+        margin-left: 3rem;
+    }
+    
+}
+.homeoptions {
+    grid-column: center-start / center-end;
+    grid-row: start-options / start-signin;
+}
+.homesignin {
+    grid-column: center-start / center-end;
+    grid-row: start-signin / start-fab;
+}
+.homefab {
+    grid-column: center-start / center-end;
+    grid-row: start-fab / start-footer;
+}
+.homefooter {
+    grid-column: center-start / center-end;
+    grid-row: start-footer / end-footer;
+}

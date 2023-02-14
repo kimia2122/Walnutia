@@ -1,0 +1,133 @@
+@import "../../style/components/Button.scss";
+@import "../../style/components/input.scss";
+@import "../../style/variables.scss";
+
+.signupContainer {
+    display: grid;
+    grid-template-columns: [start] 5.3vw [center-start] 89.3vw [center-end] 5.4vw [end];
+    grid-template-rows: [start] 9.3vh [start-box] 87.1vh [end-box] 2.8vh [end];
+}  
+
+.backIcon {
+    grid-column: center-start / center-end;
+    grid-row: start / start-box;
+    justify-self: start;
+    align-self: center;
+}
+
+.signupBox {
+    height: 55.8rem;
+    background-image: $color-box-gradient;
+    border-radius: 3.4rem;
+    grid-column: center-start / center-end;
+    grid-row: start-box / end-box;
+
+    display: grid;
+    grid-template-columns: [start] 6.2vw [center-start-box] 77.9vw [center-end-box] 6.2vw [end];
+    grid-template-rows: [s-header] 20.4vh [s-content] 79.6vh [e-content];
+
+ 
+    &--bg {
+        grid-column: start / end;
+        grid-row: s-header / auto;
+        
+    }
+    &--text {
+        grid-column: center-start-box / center-end-box;
+        grid-row: s-header / s-content;
+        margin-top: 1.8rem;
+        text-align: right;
+        
+        &__red {
+            color: $color-base-red-dark;
+        }
+        &__header {
+            font-size: $font-size-small;
+        }
+    }
+    
+    &--content {
+        grid-column: center-start-box / center-end-box;
+        grid-row: s-content / e-content;
+    }
+}
+.formContainer {
+    grid-column: center-start-box / center-end-box;
+    grid-row: s-content / e-content;
+
+    display: grid;
+    grid-template-columns: [s-1] 78.1vw [s-2];
+    grid-template-rows: [s-profileimg] 14vh [s-inputs] 28vh [s-ability] 23vh [s-btn] 12vh [e-btn];
+    justify-items: flex-end;
+
+    &--profilePhoto {
+        grid-row: s-profileimg / s-inputs;
+        display: flex;
+        align-items: center;
+        
+        &__icon {
+            background-color: $color-white;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 2rem;
+            box-shadow: 0px 3px 8px rgba($color-base-navy, 0.1);
+            img {
+                margin-left: 2rem;
+                margin-top: 2rem;
+            }
+        }
+        &__pre {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 2rem;
+            box-shadow: $base-box-shadow;
+        }
+    }
+    &--inputs {
+        grid-row: s-inputs / s-ability;
+        margin-top: 3rem;
+        &__input {
+            margin-bottom: 2rem;
+        }
+        &__input::placeholder {
+            text-align: right;
+        }
+    }
+    &--abilityText {
+        font-size: $font-size-medium;
+        text-align: right;
+    }
+    &--abilities {
+        grid-row: s-ability / s-btn;
+        margin-top: 1.6rem;
+        justify-self: end;
+        &__item {
+            display: inline-block;
+            margin: 1rem 1.6rem;
+            background-color: $color-white;
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 1.3rem;
+            box-shadow: $base-box-shadow;
+            h5 {
+                text-align: center;
+                font-size: 1rem;
+                font-weight: 100;
+                margin-top: 5rem;
+            }
+            img {
+                width: 130%;
+                height: 130%;
+                position: relative;
+                bottom: 6.5rem;
+                right: 0.7rem;
+            }
+        }
+    }
+    &--btn {
+        grid-row: s-btn / e-btn;
+        align-self: flex-end;
+    }
+}
+
+

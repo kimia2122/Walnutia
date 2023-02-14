@@ -1,0 +1,31 @@
+@import "./typography.scss";
+
+
+//RESPONSIVE BREAKPOINTS
+$bp-small: 20em; //320px
+
+//FONT VARIABLES
+$font-bold: 'IRANYekanBold';
+$font-light: 'IRANYekanLight';
+$font-regular: 'IRANYekanRegular';
+$font-size-big: 2.4rem;
+$font-size-medium: 1.6rem;
+$font-size-small: 1.4rem;
+
+//COLOR VARIABLES
+$color-white: #ffffff;
+$color-base-red-dark: #D90429;
+$color-base-red-light: #EF233C;
+$color-base-white: #EDF2F4;
+$color-base-navy: #2B2D42;
+$color-secondary-gray: #8D99AE;
+
+$color-background: rgba( $color-base-white, 0.4);
+
+$color-box-gradient: linear-gradient(180deg, rgba($color-base-white, 0.2), $color-base-white);
+
+//SHADOWS
+
+$base-box-shadow: 0px 3px 8px rgba($color-base-navy, 0.1);
+$btn-shadow: 6px 6px 16px #D1CDC7, -6px -6px 16px #ffffff;
+$btn-active-shadow: 2px 2px 5px #D1CDC7, -2px -2px 5px #ffffff;

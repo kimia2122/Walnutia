@@ -1,0 +1,51 @@
+@import "../../style/components/Button.scss";
+@import "../../style/components/input.scss";
+@import "../../style/variables.scss";
+
+.loginContainer {
+    display: grid;
+    grid-template-columns: [start] 1.7rem [center-start] auto [center-end] 1.7rem [end];
+    grid-template-rows: [start] 34.3vh [end-logo] 11.5vh [start-box] 44.6vh [end-box] 9.3vh [end];
+}  
+
+.big-logo {
+    width: 100%;
+    grid-column: start / end;
+}
+.big-walnutia {
+    width: 60%;
+    grid-column: center-start / center-end;
+    grid-row: end-logo / start-box;
+    justify-self: center;
+}
+.loginBox {
+    background-image: $color-box-gradient;
+    border-radius: 34px;
+    grid-column: center-start / center-end;
+    grid-row: start-box / end-box;
+
+    display: grid;
+    grid-template-columns: [start] 5.9% [center-start] 88.2% [center-end] 5.9% [end];
+    grid-template-rows: [start] 30% [middle] 70% [end];
+
+    &__header {
+        grid-column: center-start / center-end;
+        grid-row: start / end;
+        justify-self: center;
+        margin-top: 2rem;
+        font-size: $font-size-medium;
+    }
+    &__form {
+        grid-column: center-start / center-end;
+        grid-row: middle / end;
+        justify-self: center;
+
+        &--item {
+            margin-bottom: 1rem;
+            
+            input{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

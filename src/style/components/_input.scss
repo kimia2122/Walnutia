@@ -1,0 +1,13 @@
+@import "../variables.scss";
+
+.input-main {
+    width: 25rem;
+    height: 4rem;
+    padding: 0 1rem;
+    background-color: $color-white;
+    color: $color-base-navy;
+    border: none;
+    border-radius: 1.2rem;
+    font-family: $font-regular;
+    font-size: $font-size-medium;
+}
